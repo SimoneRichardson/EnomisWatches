@@ -16,7 +16,7 @@ namespace EnomisWatches.Models
     {
         public Category()
         {
-            this.SubCatogories = new HashSet<Category>();
+            this.Subcategory = new HashSet<Category>();
             this.Products = new HashSet<Product>();
         }
     
@@ -24,7 +24,7 @@ namespace EnomisWatches.Models
         public string Name { get; set; }
         public Nullable<int> ParentID { get; set; }
     
-        public virtual ICollection<Category> SubCatogories { get; set; }
+        public virtual ICollection<Category> Subcategory { get; set; }
         public virtual Category ParentCategory { get; set; }
         public virtual ICollection<Product> Products { get; set; }
     }

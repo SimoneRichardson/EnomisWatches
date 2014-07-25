@@ -25,15 +25,7 @@ namespace EnomisWatches.Models
 
 
 
-        [Display(Img= "Parent Image")]
-        public int ImageID { get; set; }
-        public int ProductID { get; set; }
         
-        [Required, nvarchar(200)]
-        public string ImageURL { get; set; }
-        
-        [Required, nvarchar
-        public string Description { get; set; }
     }
 
 }

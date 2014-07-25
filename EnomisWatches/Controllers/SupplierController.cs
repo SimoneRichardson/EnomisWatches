@@ -8,7 +8,7 @@ namespace EnomisWatches.Controllers
 {
     //Authorize data annotation requires a user
     //logged in to access anything in this controller
-    [Authorize()]
+    //[Authorize()]
     public class SupplierController : Controller
     {
         //make a connnection to the database
@@ -22,7 +22,7 @@ namespace EnomisWatches.Controllers
         {
             //the index will return all of the 
             //user's posts
-            return View(db.Supplier);
+            return View(db.Suppliers);
         }
         // Get: /Supplier/Create
         [HttpGet]
@@ -32,17 +32,13 @@ namespace EnomisWatches.Controllers
             return View(new Models.Supplier());
         }
         //Post: /Supplier/Create
-        [HttpSupplier]
+        [HttpPost]
         public ActionResult Create(Models.Supplier supplier)
         {
-            //set the date create to be Now
-            supplier.Username = User.Identity.Name;
-            //set the date create to be Now
-            supplier.DateCreated = DateTime.Now;
-              
+                 
             
             //add it to the database
-            db.Supplier.Add(supplier);
+            db.Suppliers.Add(supplier);
             //save our changes
             db.SaveChanges();
             //kick user back to their list of posts
@@ -52,16 +48,16 @@ namespace EnomisWatches.Controllers
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            Models.Supplier supplierToDelete = db.Supplier.Find(id);
+            Models.Supplier supplierToDelete = db.Suppliers.Find(id);
             //pass the object to the view
             return View(supplierToDelete);
         }
-        [HttpSupplier, ActionName("Delete")]
+        [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            Models.Supplier supplierToDelete = db.Supplier.Find(id);
+            Models.Supplier supplierToDelete = db.Suppliers.Find(id);
             //delete the supplier from the database
-            db.Posts.Remove(supplierToDelete);
+            db.Suppliers.Remove(supplierToDelete);
             //save the changes to the DB
             db.SaveChanges();
             //redirect the user 
@@ -72,13 +68,13 @@ namespace EnomisWatches.Controllers
         public ActionResult Edit(int id)
         {
             //get the supplier to edit from the db
-            Models.Supplier supplierToEdit = db.Supplier.Find(id);
+            Models.Supplier supplierToEdit = db.Suppliers.Find(id);
             //pass our supplier to edit to the view
             return View (supplierToEdit);
         }
         //Supplier: /Supplier/Edit/1
-        [HttpSupplier]
-        public ActionResult Edit(Models.Post postToEdit)
+        [HttpPost]
+        public ActionResult Edit(Models.Supplier supplierToEdit)
         {
             //Set the supplier to be updated
             db.Entry(supplierToEdit).State = System.Data.EntityState.Modified;

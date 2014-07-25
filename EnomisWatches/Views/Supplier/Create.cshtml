@@ -1,31 +1,24 @@
-﻿@model EnomisWatches.Models.Image
+﻿@model EnomisWatches.Models.Supplier
 
 @{
     ViewBag.Title = "Create";
 }
 
 <h2>Create</h2>
-@* must have to upload post*@
-@using (Html.BeginForm("Create", "Image", FormMethod.Post, new {enctype="multipart/form-data"})) {
+
+@using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>Image</legend>
+        <legend>Supplier</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.ProductID, "Product")
+            @Html.LabelFor(model => model.Name)
         </div>
         <div class="editor-field">
-            @Html.DropDownList("ProductID", String.Empty)
-            @Html.ValidationMessageFor(model => model.ProductID)
-        </div>
-
-        <div class="editor-label">
-            upload an image
-        </div>
-        <div class="editor-field">
-            <input type="file" id ="upload" name ="upload" />
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
         </div>
 
         <div class="editor-label">

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using EnomisWatches.Models;
-
+using System.IO; //add System IO to save/get files
 namespace EnomisWatches.Controllers
 {
     public class ImageController : Controller
@@ -46,11 +46,27 @@ namespace EnomisWatches.Controllers
 
         //
         // POST: /Image/Create
-
+        //add  the httpPostedFileBase parameter to our post action
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Image image)
+        public ActionResult Create(Image image, HttpPostedFileBase upload)
         {
+            //handle the file upload
+            //step 1: Get the filename
+            string fileName = upload.FileName;
+            //step 2: get the file path to save the
+            //upload to
+            string path = Path.Combine(Server.MapPath("~/Content/Images"), fileName);
+            //step 3: Save our file
+            upload.SaveAs(path);
+            //Step 4: Update the ImageUrl for our
+            //database object
+            image.ImageURL = "/Content/Images/" + fileName;
+
+            
+            
+            
+            
             if (ModelState.IsValid)
             {
                 db.Images.Add(image);

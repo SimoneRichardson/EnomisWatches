@@ -30,9 +30,9 @@ namespace EnomisWatches.Models
         public int CategoryID { get; set; }
         public string SKU { get; set; }
     
+        public virtual Category Category { get; set; }
         public virtual ICollection<Image> Images { get; set; }
         public virtual Supplier Supplier { get; set; }
         public virtual ICollection<Review> Reviews { get; set; }
-        public virtual Category Category { get; set; }
     }
 }

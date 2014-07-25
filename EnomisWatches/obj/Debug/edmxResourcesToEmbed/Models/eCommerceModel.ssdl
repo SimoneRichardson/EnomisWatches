@@ -2,14 +2,7 @@
 <Schema Namespace="ECommerceModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="ECommerceModelStoreContainer">
     <EntitySet Name="Categories" EntityType="ECommerceModel.Store.Categories" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Images" EntityType="ECommerceModel.Store.Images" store:Type="Tables" store:Schema="dbo" store:Name="Images">
-      <DefiningQuery>SELECT 
-      [Images].[ImageID] AS [ImageID], 
-      [Images].[ProductID] AS [ProductID], 
-      [Images].[ImageURL] AS [ImageURL], 
-      [Images].[Description] AS [Description]
-      FROM [dbo].[Images] AS [Images]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="Images" EntityType="ECommerceModel.Store.Images" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Products" EntityType="ECommerceModel.Store.Products" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Reviews" EntityType="ECommerceModel.Store.Reviews" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Suppliers" EntityType="ECommerceModel.Store.Suppliers" store:Type="Tables" Schema="dbo" />
@@ -42,17 +35,11 @@
     <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
     <Property Name="ParentID" Type="int" />
   </EntityType>
-  <!--Errors Found During Generation:
-      warning 6002: The table/view 'ECommerce.dbo.Images' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
   <EntityType Name="Images">
     <Key>
       <PropertyRef Name="ImageID" />
-      <PropertyRef Name="ProductID" />
-      <PropertyRef Name="ImageURL" />
-      <PropertyRef Name="Description" />
     </Key>
-    <Property Name="ImageID" Type="int" Nullable="false" />
+    <Property Name="ImageID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ProductID" Type="int" Nullable="false" />
     <Property Name="ImageURL" Type="nvarchar" Nullable="false" MaxLength="200" />
     <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="200" />

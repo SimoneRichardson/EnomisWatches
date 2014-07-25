@@ -5,16 +5,16 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="a96a9151912e41f685b2c36a925c6a23" Name="Diagram1" ZoomLevel="77">
-        <EntityTypeShape EntityType="ECommerceModel.Image" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="ECommerceModel.Product" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ECommerceModel.Review" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ECommerceModel.Supplier" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <AssociationConnector Association="ECommerceModel.FK_Images_Products" ManuallyRouted="false" />
-        <AssociationConnector Association="ECommerceModel.FK_Products_Suppliers" ManuallyRouted="false" />
-        <AssociationConnector Association="ECommerceModel.FK_Reviews_Products" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="ECommerceModel.Category" Width="1.5" PointX="7.1363354433031452" PointY="31.80773699274647" />
+        <EntityTypeShape EntityType="ECommerceModel.Category" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ECommerceModel.Image" Width="1.5" PointX="5.25" PointY="2.25" />
+        <EntityTypeShape EntityType="ECommerceModel.Product" Width="1.5" PointX="3" PointY="3.125" />
+        <EntityTypeShape EntityType="ECommerceModel.Review" Width="1.5" PointX="5.25" PointY="4.875" />
+        <EntityTypeShape EntityType="ECommerceModel.Supplier" Width="1.5" PointX="0.75" PointY="4" />
         <AssociationConnector Association="ECommerceModel.FK_Categories_Categories" />
         <AssociationConnector Association="ECommerceModel.FK_Products_Categories" />
+        <AssociationConnector Association="ECommerceModel.FK_Images_Products" />
+        <AssociationConnector Association="ECommerceModel.FK_Products_Suppliers" />
+        <AssociationConnector Association="ECommerceModel.FK_Reviews_Products" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -80,6 +80,6 @@ C:\Users\Technologist\Documents\GitHub\EnomisWatches\EnomisWatches\bin\ko\System
 C:\Users\Technologist\Documents\GitHub\EnomisWatches\EnomisWatches\bin\ru\System.Spatial.resources.dll
 C:\Users\Technologist\Documents\GitHub\EnomisWatches\EnomisWatches\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\Technologist\Documents\GitHub\EnomisWatches\EnomisWatches\bin\zh-Hant\System.Spatial.resources.dll
-C:\Users\Technologist\Documents\GitHub\EnomisWatches\EnomisWatches\obj\Debug\EnomisWatches.csprojResolveAssemblyReference.cache
 C:\Users\Technologist\Documents\GitHub\EnomisWatches\EnomisWatches\obj\Debug\EnomisWatches.dll
 C:\Users\Technologist\Documents\GitHub\EnomisWatches\EnomisWatches\obj\Debug\EnomisWatches.pdb
+C:\Users\Technologist\Documents\GitHub\EnomisWatches\EnomisWatches\obj\Debug\EnomisWatches.csprojResolveAssemblyReference.cache
