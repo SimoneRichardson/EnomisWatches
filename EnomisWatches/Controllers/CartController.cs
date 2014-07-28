@@ -35,7 +35,7 @@ namespace EnomisWatches.Controllers
         public ActionResult Remove(int id = 0)
         {
           Item item = db.Item.Find(id);
-            if (cart == null)
+            if (item == null)
             {
                 return HttpNotFound();
             }
