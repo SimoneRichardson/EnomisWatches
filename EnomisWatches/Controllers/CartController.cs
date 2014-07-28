@@ -32,7 +32,7 @@ namespace EnomisWatches.Controllers
        //
         // GET: /Cart/Remove/5
 
-        public ActionResult Delete(int id = 0)
+        public ActionResult Remove(int id = 0)
         {
           Item item = db.Item.Find(id);
             if (cart == null)
