@@ -404,6 +404,7 @@
     <Content Include="Views\Shop\ByProduct.cshtml" />
     <Content Include="Views\Cart\MiniCart.cshtml" />
     <Content Include="Views\Cart\Add.cshtml" />
+    <Content Include="Views\Cart\Remove.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

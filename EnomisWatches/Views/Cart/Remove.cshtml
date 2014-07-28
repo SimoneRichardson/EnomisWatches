@@ -1,0 +1,96 @@
+﻿@model EnomisWatches.Models.Order
+
+@{
+    ViewBag.Title = "Remove";
+}
+
+<h2>Remove</h2>
+
+<h3>Are you sure you want to remove this?</h3>
+<fieldset>
+    <legend>Order</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Total)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Total)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BillingAddressID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BillingAddressID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ShippingAddressID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ShippingAddressID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PaymentID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PaymentID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Tax)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Tax)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ShippingTotal)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ShippingTotal)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Status)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Status)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateCreated)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateCreated)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateCompleted)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateCompleted)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateShipped)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateShipped)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
