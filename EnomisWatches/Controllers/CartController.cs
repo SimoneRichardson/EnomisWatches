@@ -43,7 +43,7 @@ namespace EnomisWatches.Controllers
         }
 
         //
-        // POST: /Cart/Delete/5
+        // POST: /Cart/Remove/5
 
         [HttpPost, ActionName("Remove")]
         [ValidateAntiForgeryToken]
