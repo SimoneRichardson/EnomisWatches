@@ -9,7 +9,9 @@ namespace EnomisWatches.Controllers
     //Authorize data annotation requires a user
     //logged in to access anything in this controller
     //[Authorize()]
-    public class SupplierController : Controller
+    //Limit access only to admin users
+    [Authorize(Roles = "admin")]
+    public class SupplierController : BaseController
     {
         //make a connnection to the database
         Models.ECommerceEntities db = new Models.ECommerceEntities();

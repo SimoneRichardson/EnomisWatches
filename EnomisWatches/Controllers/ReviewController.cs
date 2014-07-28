@@ -9,7 +9,7 @@ using EnomisWatches.Models;
 
 namespace EnomisWatches.Controllers
 {
-    public class ReviewController : Controller
+    public class ReviewController : BaseController
     {
         private ECommerceEntities db = new ECommerceEntities();
 

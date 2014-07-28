@@ -9,7 +9,9 @@ using EnomisWatches.Models;
 using System.IO; //add System IO to save/get files
 namespace EnomisWatches.Controllers
 {
-    public class ImageController : Controller
+    //Limit access only to admin users
+    [Authorize(Roles = "admin")]
+    public class ImageController : BaseController
     {
         private ECommerceEntities db = new ECommerceEntities();
 

@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace EnomisWatches.Controllers
 {
-    public class ShopController : Controller
+    public class ShopController : BaseController
     {
        
         

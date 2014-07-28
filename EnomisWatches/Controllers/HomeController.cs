@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
+
 
 namespace EnomisWatches.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
 
-        //db connection
-        Models.ECommerceEntities db = new Models.ECommerceEntities();
+       
         
         public ActionResult Index()
         {
@@ -31,5 +32,6 @@ namespace EnomisWatches.Controllers
 
             return View();
         }
+       
     }
 }

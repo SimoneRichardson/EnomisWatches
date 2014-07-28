@@ -9,7 +9,9 @@ using EnomisWatches.Models;
 
 namespace EnomisWatches.Controllers
 {
-    public class ProductController : Controller
+    //Limit access only to admin users
+    [Authorize(Roles = "admin")]
+    public class ProductController : BaseController
     {
         private ECommerceEntities db = new ECommerceEntities();
 
